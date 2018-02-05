@@ -29,7 +29,10 @@ for _ in range(0,int(numberOfIt)):
 	driver.find_element_by_xpath("//input[@id='txtrollcode']").send_keys(roll)
 	driver.find_element_by_xpath("//form[@id='form1']").click()
 	time.sleep(2)
-	driver.find_element_by_xpath("//option[@value='03']").click()
+	try:
+		driver.find_element_by_xpath("//option[@value='03']").click()
+	except:
+		pass
 	srcc=driver.find_element_by_xpath("//img[@alt='Captcha']").get_attribute('src')
 	urllib.request.urlretrieve(srcc,'E:/1.png')
 	a=Image.open(path+'1.png')    #saving captcha image
@@ -38,18 +41,28 @@ for _ in range(0,int(numberOfIt)):
 	b=a.convert('RGBA')   
 	num=image_to_string(b)  #using OCR for getting String from text 
 	num=num.replace(':',' ') 
-	captcha=eval(num)
+	try:
+		captcha=eval(num)
+	except:
+		continue
+		
 	print(captcha)
 	driver.find_element_by_xpath("//input[@id='txtCaptcha']").send_keys(captcha)
 	driver.find_element_by_xpath("//input[@class='btn btn-success']").click()
 	time.sleep(1)
-	driver.switch_to_alert().accept()
+	try:
+		driver.switch_to_alert().accept()
+	except:
+		save=save+1
+		roll=roll+1
+		continue
 	time.sleep(1)
 	driver.save_screenshot(savePath+str(save)+'.png')  #saving result as screenshot
 	roll=roll+1
 	save=save+1
 print('Downloaded in'+savePath)
 driver.quit()
+driver.switch_to_alert().accept()
 
 
 
