@@ -18,6 +18,6 @@ Requirements
 Description
 ============
 This script uses selenium for automationg downloading task.The captcha to string is done by using OCR tool pytesseract.
-User need to edit and provide proper downloading path for all grade cards.
+User needs to edit and provide proper downloading path for all grade cards.
 
 P.S:This script is made for fun use this at your own risk
