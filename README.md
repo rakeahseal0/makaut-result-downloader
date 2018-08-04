@@ -6,13 +6,24 @@ Getting Started
 
 Download and Save the script with .py extension and simply run it from command line.
 
-Requirements
+*makautv1.py    -----for 2017 results(even).
+*makautv2.py 	-----for 2018 results(odd).
+
+Requirements for v1
 ============
 
-* python 2.7 or python 3.4+
+* python python 3.4+
 * python imaging library(PIL)
 * Selenium
 * pytesseract
+
+Requirements for v2
+============
+
+* python python 3.4+
+* Selenium
+
+
 
 
 Description
