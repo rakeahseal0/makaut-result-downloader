@@ -33,8 +33,7 @@ User needs to edit and provide proper downloading path for all grade cards.
 
 P.S:This script is made for fun use this at your own risk
 
-### Usage
-```
-python3 makautv2.py
-
+Usage
+============
+```python3 makautv2.py
 ```
