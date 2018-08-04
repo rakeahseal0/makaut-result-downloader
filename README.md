@@ -32,3 +32,9 @@ This script uses selenium for automationg downloading task.The captcha to string
 User needs to edit and provide proper downloading path for all grade cards.
 
 P.S:This script is made for fun use this at your own risk
+
+### Usage
+```
+python3 makautv2.py
+
+```
