@@ -8,15 +8,19 @@
 from selenium import webdriver
 from  selenium.webdriver.common.keys import Keys
 import sys
+import os
 import time
 
 
-n=200
-sem=4
+n=100
+sem=6
 
-roll=int('10400316040')
-savePath=sys.path[0]
-
+roll=int('10400315070')
+savePath=sys.path[0]+"/sem"+str(sem)+"/"
+try:
+	os.mkdir(savePath)
+except:
+	pass
 c=1
 driver=webdriver.Chrome(executable_path='/home/rakesh/py/selenium_drivers/chromedriver')
 driver.set_window_position(3000,4000)
